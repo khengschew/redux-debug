@@ -6,7 +6,8 @@ import fetchData from './actions/actions';
 import App from './components/App';
 
 ReactDOM.render(
-  <Provider>
+  // Fix: Add store to provider
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('app'),
