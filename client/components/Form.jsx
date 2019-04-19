@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { formUpdate, addItemAction } from '../actions/actions';
 
 const mapStateToProps = state => ({
-  currentItem: state.currentItems,
+  // Fix: state name needs to match reducers
+  currentItem: state.currentItem,
 });
 
 const mapDispatchToProps = dispatch => ({

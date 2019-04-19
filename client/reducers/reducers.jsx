@@ -14,9 +14,8 @@ const items = (state = [], action) => {
       return state.concat([action.payload]);
 
     case ITEM_DELETE:
-      return state.filter(value => {
-        value !== action.payload
-      });
+      // Fix: Filter tests need to return boolean
+      return state.filter(value => value !== action.payload);
 
     default:
       return state;

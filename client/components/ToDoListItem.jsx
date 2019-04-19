@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Add error where onclick is just props.deleteItem
+// Fix: onClick handlers should be function that calls props.deleteItem with the item as an argument to trigger for only that item
 const ToDoListItem = (props) => (
-    <li onClick={props.deleteItem}>
+    <li onClick={() => props.deleteItem(props.item)}>
       {props.item}
     </li>
 );
